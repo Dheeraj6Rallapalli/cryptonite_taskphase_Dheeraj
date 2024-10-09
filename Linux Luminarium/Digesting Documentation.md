@@ -135,3 +135,53 @@ hacker@man~searching-for-manuals:~$ /challenge/challenge --wshisl 703
 Correct usage! Your flag: pwn.college{wNs7h0iPslulQTyby3kR-DhLKXB.dZTM4QDL1MzN0czW}
 ```
 >Flag: pwn.college{wNs7h0iPslulQTyby3kR-DhLKXB.dZTM4QDL1MzN0czW}
+
+## Helpful programs
+>[!TIP]
+>Some programs don't have a man page, but might tell you how to run them if invoked with a special argument. Usually, this argument is --help, but it can often be -h or, in rare cases, -?, help, or other esoteric values like /?
+
+here to aquire the flag we need to use `--help` to know about the command so firstly I tried with `$ challenge --help` it didn't work so then I tried with `$ /challenge/challenge --help` with previous challenges knowledge and it worked then by given instructions I used `$ /challenge/challenge -p` command to get argument for `-g` and then we got the argument then we use `$ /challenge/challenge -g 341` to get the flag
+```
+hacker@man~helpful-programs:~$ challenge --help
+ssh-entrypoint: challenge: command not found
+hacker@man~helpful-programs:~$ /challenge/challenge --help
+usage: a challenge to make you ask for help [-h] [--fortune] [-v]
+                                            [-g GIVE_THE_FLAG] [-p]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --fortune             read your fortune
+  -v, --version         get the version number
+  -g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG
+                        get the flag, if given the correct value
+  -p, --print-value     print the value that will cause the -g option to give
+                        you the flag
+hacker@man~helpful-programs:~$ /challenge/challenge -p
+The secret value is: 341
+hacker@man~helpful-programs:~$ /challenge/challenge -g 341
+Correct usage! Your flag: pwn.college{EOqDgcTX3bJUMW_Dw_HGONTsVAP.ddjM4QDL1MzN0czW}
+```
+>Flag: pwn.college{EOqDgcTX3bJUMW_Dw_HGONTsVAP.ddjM4QDL1MzN0czW}
+
+## Help for builtins
+>[!TIP]
+>we use `help` command for some commands which have built into the shell it self. They are called _buitins_ ,they are invoked just like commands, but the shell handles them internally instead of launching other programs we pass command as argument to them
+
+here to aquire flag we need to use `help` command to know about `challenge` so we use `$ help challenge` command to know about the flag and then we use `$ challenge --secret ADdLcf_w` command as they mentioned to get the flag
+```
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+    
+    Options:
+      --fortune		display a fortune
+      --version		display the version
+      --secret VALUE	prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "ADdLcf_w".
+hacker@man~help-for-builtins:~$ challenge --secret ADdLcf_w
+Correct! Here is your flag!
+pwn.college{ADdLcf_wTpkgxYq0vOO4Hae0fzb.dRTM5QDL1MzN0czW}
+```
+>Flag: pwn.college{ADdLcf_wTpkgxYq0vOO4Hae0fzb.dRTM5QDL1MzN0czW}
