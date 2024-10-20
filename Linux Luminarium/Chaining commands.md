@@ -37,3 +37,14 @@ Correct! Here is your flag:
 pwn.college{kuBPMm9GA3YzCh8MX_wgdRVvL6r.dhTM5QDL1MzN0czW}
 ```
 >Flag: pwn.college{kuBPMm9GA3YzCh8MX_wgdRVvL6r.dhTM5QDL1MzN0czW}
+
+## Executable Shell scripts
+Here to aquire flag we need to create a file which stores `/challenge/solve` command and then we need to make it executable using `$ chmod +x k.sh` command and then we need to run it using `$ ./k.sh` command to get the flag
+```
+hacker@chaining~executable-shell-scripts:~$ nano k.sh
+hacker@chaining~executable-shell-scripts:~$ chmod +x k.sh
+hacker@chaining~executable-shell-scripts:~$ ./k.sh
+Congratulations on your shell script execution! Your flag:
+pwn.college{wyYE3eWZuNT7h3rIXTObZykj6Q2.dRzNyUDL1MzN0czW}
+```
+>Flag: pwn.college{wyYE3eWZuNT7h3rIXTObZykj6Q2.dRzNyUDL1MzN0czW}
