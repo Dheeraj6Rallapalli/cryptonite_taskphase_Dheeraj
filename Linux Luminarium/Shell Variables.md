@@ -31,6 +31,7 @@ pwn.college{Ug9-hKUU1NKp3crg_M9Ro4WlQve.dBjN1QDL1MzN0czW}
 ## Exporting Variables
 >[!TIP]
 >we use `export` command to export variables and make them environment variables
+
 here to aquire flag we need set `COLLEGE` value to `PWN` variable and we need to export it with `$ export PWN=COLLEGE` command and then we need to set `PWN` value to `COLLEGE` variable with `$ COLLEGE=PWN` command and then we need to run `$ /challenge/run` command to get the flag  
 ```
 hacker@variables~exporting-variables:~$ export PWN=COLLEGE
